@@ -1,3 +1,5 @@
+wait lang pre
+
 receipts
 
 ![TICKET](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/51e4c177-7ae7-473c-a61e-c7dcf9cea92e)
