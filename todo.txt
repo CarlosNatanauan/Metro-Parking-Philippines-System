@@ -1,0 +1,8 @@
+Admin:
+- View/Edit/Update Parking Rates and Pricing Policies
+- Generate Revenue Reports
+
+- Manage employee records
+  - Employee information(username, password, fname, lname)
+  - Job description(Chief Incharge, yada yada yada...)
+  - Schedules(9-5)

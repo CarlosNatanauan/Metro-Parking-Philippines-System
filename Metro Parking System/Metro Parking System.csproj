@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{954C267F-D4E4-421C-A71B-549BF65C2EAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Metro_Parking_System</RootNamespace>
+    <AssemblyName>Metro Parking System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>metroparkingred.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmData\CoordinatorDetails.cs" />
+    <Compile Include="AdmData\Employee.cs" />
+    <Compile Include="admin_log.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>admin_log.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmGenerateRev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmGenerateRev.Designer.cs">
+      <DependentUpon>frmGenerateRev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmManageEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmManageEmp.Designer.cs">
+      <DependentUpon>frmManageEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmManageRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmManageRates.Designer.cs">
+      <DependentUpon>frmManageRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmNavMenu\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPrompts\AdminInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\AdminInformation.Designer.cs">
+      <DependentUpon>AdminInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPrompts\AdminLoginCredential.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\AdminLoginCredential.Designer.cs">
+      <DependentUpon>AdminLoginCredential.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPrompts\DemploymentStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\DemploymentStatus.Designer.cs">
+      <DependentUpon>DemploymentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPrompts\DeploySubstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\DeploySubstitute.Designer.cs">
+      <DependentUpon>DeploySubstitute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPrompts\FixSchedAndJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\FixSchedAndJob.Designer.cs">
+      <DependentUpon>FixSchedAndJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPrompts\UpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPrompts\WelcomeMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\WelcomeMessage.Designer.cs">
+      <DependentUpon>WelcomeMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Daily_detailed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Daily_detailed.Designer.cs">
+      <DependentUpon>UC_Daily_detailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Monthly_detailed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Monthly_detailed.Designer.cs">
+      <DependentUpon>UC_Monthly_detailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Weekly_detailed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Weekly_detailed.Designer.cs">
+      <DependentUpon>UC_Weekly_detailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Yearly_detailed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Yearly_detailed.Designer.cs">
+      <DependentUpon>UC_Yearly_detailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Daily.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Daily.Designer.cs">
+      <DependentUpon>UC_Daily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Monthly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Monthly.Designer.cs">
+      <DependentUpon>UC_Monthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Weekly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Weekly.Designer.cs">
+      <DependentUpon>UC_Weekly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Yearly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Yearly.Designer.cs">
+      <DependentUpon>UC_Yearly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\UC_DetailedInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\UC_DetailedInfo.Designer.cs">
+      <DependentUpon>UC_DetailedInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\UC_RevenueGeneration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\Report Generation\UC_RevenueGeneration.Designer.cs">
+      <DependentUpon>UC_RevenueGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\UC_Emp_Management.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\UC_Emp_Management.Designer.cs">
+      <DependentUpon>UC_Emp_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\UC_Error_Message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\UC_Error_Message.Designer.cs">
+      <DependentUpon>UC_Error_Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUserControls\UC_Shift_Summary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmUserControls\UC_Shift_Summary.Designer.cs">
+      <DependentUpon>UC_Shift_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="casual_log.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>casual_log.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="databaseCodes.cs" />
+    <Compile Include="EmpData\ParkingPlace.cs" />
+    <Compile Include="AdmPrompts\EditValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmPrompts\EditValue.Designer.cs">
+      <DependentUpon>EditValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpPrompts\WelcomeMessageEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpPrompts\WelcomeMessageEmp.Designer.cs">
+      <DependentUpon>WelcomeMessageEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_LotMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_LotMap.Designer.cs">
+      <DependentUpon>UC_LotMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_LotMapSum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_LotMapSum.Designer.cs">
+      <DependentUpon>UC_LotMapSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingPage\LoadingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingPage\LoadingPage.Designer.cs">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\AdminForgetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\AdminForgetPass.Designer.cs">
+      <DependentUpon>AdminForgetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\MainLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\MainLoginForm.Designer.cs">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\SecurityKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\SecurityKey.Designer.cs">
+      <DependentUpon>SecurityKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\UC_InfoAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login\UC_InfoAdmin.Designer.cs">
+      <DependentUpon>UC_InfoAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\UC_InfoEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login\UC_InfoEmployee.Designer.cs">
+      <DependentUpon>UC_InfoEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>logs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_Parking.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_Parking.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmLotMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmLotMap.Designer.cs">
+      <DependentUpon>frmLotMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmParkingRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmParkingRate.Designer.cs">
+      <DependentUpon>frmParkingRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpNavMenu\frmVehicle.Designer.cs">
+      <DependentUpon>frmVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\MainFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\MainFormAdmin.Designer.cs">
+      <DependentUpon>MainFormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Metro_ParkingDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Metro_ParkingDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="EmpPrompts\EnterCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpPrompts\EnterCash.Designer.cs">
+      <DependentUpon>EnterCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpPrompts\Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpPrompts\Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpPrompts\UpdatePlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpPrompts\UpdatePlate.Designer.cs">
+      <DependentUpon>UpdatePlate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EmpUserControls\UC_Casual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_Casual.Designer.cs">
+      <DependentUpon>UC_Casual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_Casual_Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_Casual_Log.Designer.cs">
+      <DependentUpon>UC_Casual_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_Flatrate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_Flatrate.Designer.cs">
+      <DependentUpon>UC_Flatrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_Flatrate_Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpUserControls\UC_Flatrate_Log.Designer.cs">
+      <DependentUpon>UC_Flatrate_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rates.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="User_Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User_Data.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdmNavMenu\frmGenerateRev.resx">
+      <DependentUpon>frmGenerateRev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmNavMenu\frmManageEmp.resx">
+      <DependentUpon>frmManageEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmNavMenu\frmManageRates.resx">
+      <DependentUpon>frmManageRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmNavMenu\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\AdminInformation.resx">
+      <DependentUpon>AdminInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\AdminLoginCredential.resx">
+      <DependentUpon>AdminLoginCredential.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\DemploymentStatus.resx">
+      <DependentUpon>DemploymentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\DeploySubstitute.resx">
+      <DependentUpon>DeploySubstitute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\FixSchedAndJob.resx">
+      <DependentUpon>FixSchedAndJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\WelcomeMessage.resx">
+      <DependentUpon>WelcomeMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Daily_detailed.resx">
+      <DependentUpon>UC_Daily_detailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Monthly_detailed.resx">
+      <DependentUpon>UC_Monthly_detailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Weekly_detailed.resx">
+      <DependentUpon>UC_Weekly_detailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Detailed Report Buttons\UC_Yearly_detailed.resx">
+      <DependentUpon>UC_Yearly_detailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Daily.resx">
+      <DependentUpon>UC_Daily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Monthly.resx">
+      <DependentUpon>UC_Monthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Weekly.resx">
+      <DependentUpon>UC_Weekly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\Revenue Report Buttons\UC_Yearly.resx">
+      <DependentUpon>UC_Yearly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\UC_DetailedInfo.resx">
+      <DependentUpon>UC_DetailedInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\Report Generation\UC_RevenueGeneration.resx">
+      <DependentUpon>UC_RevenueGeneration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\UC_Emp_Management.resx">
+      <DependentUpon>UC_Emp_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\UC_Error_Message.resx">
+      <DependentUpon>UC_Error_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmUserControls\UC_Shift_Summary.resx">
+      <DependentUpon>UC_Shift_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmPrompts\EditValue.resx">
+      <DependentUpon>EditValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpPrompts\WelcomeMessageEmp.resx">
+      <DependentUpon>WelcomeMessageEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpUserControls\UC_LotMap.resx">
+      <DependentUpon>UC_LotMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpUserControls\UC_LotMapSum.resx">
+      <DependentUpon>UC_LotMapSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingPage\LoadingPage.resx">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\AdminForgetPass.resx">
+      <DependentUpon>AdminForgetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\MainLoginForm.resx">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\SecurityKey.resx">
+      <DependentUpon>SecurityKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\UC_InfoAdmin.resx">
+      <DependentUpon>UC_InfoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\UC_InfoEmployee.resx">
+      <DependentUpon>UC_InfoEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpNavMenu\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpNavMenu\frmLotMap.resx">
+      <DependentUpon>frmLotMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpNavMenu\frmParkingRate.resx">
+      <DependentUpon>frmParkingRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpNavMenu\frmVehicle.resx">
+      <DependentUpon>frmVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\MainFormAdmin.resx">
+      <DependentUpon>MainFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpPrompts\EnterCash.resx">
+      <DependentUpon>EnterCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpPrompts\Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpPrompts\UpdatePlate.resx">
+      <DependentUpon>UpdatePlate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EmpUserControls\UC_Casual.resx">
+      <DependentUpon>UC_Casual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpUserControls\UC_Casual_Log.resx">
+      <DependentUpon>UC_Casual_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpUserControls\UC_Flatrate.resx">
+      <DependentUpon>UC_Flatrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpUserControls\UC_Flatrate_Log.resx">
+      <DependentUpon>UC_Flatrate_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="admin_log.xsc">
+      <DependentUpon>admin_log.xsd</DependentUpon>
+    </None>
+    <None Include="admin_log.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>admin_log.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="admin_log.xss">
+      <DependentUpon>admin_log.xsd</DependentUpon>
+    </None>
+    <None Include="casual_log.xsc">
+      <DependentUpon>casual_log.xsd</DependentUpon>
+    </None>
+    <None Include="casual_log.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>casual_log.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="casual_log.xss">
+      <DependentUpon>casual_log.xsd</DependentUpon>
+    </None>
+    <None Include="logs.xsc">
+      <DependentUpon>logs.xsd</DependentUpon>
+    </None>
+    <None Include="logs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>logs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="logs.xss">
+      <DependentUpon>logs.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_Parking.xsc">
+      <DependentUpon>Metro_Parking.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_Parking.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_Parking.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_Parking.xss">
+      <DependentUpon>Metro_Parking.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet1.xsc">
+      <DependentUpon>Metro_ParkingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet1.xss">
+      <DependentUpon>Metro_ParkingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet10.xsc">
+      <DependentUpon>Metro_ParkingDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet10.xss">
+      <DependentUpon>Metro_ParkingDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet11.xsc">
+      <DependentUpon>Metro_ParkingDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet11.xss">
+      <DependentUpon>Metro_ParkingDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet2.xsc">
+      <DependentUpon>Metro_ParkingDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet2.xss">
+      <DependentUpon>Metro_ParkingDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet3.xsc">
+      <DependentUpon>Metro_ParkingDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet3.xss">
+      <DependentUpon>Metro_ParkingDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet4.xsc">
+      <DependentUpon>Metro_ParkingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet4.xss">
+      <DependentUpon>Metro_ParkingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet5.xsc">
+      <DependentUpon>Metro_ParkingDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet5.xss">
+      <DependentUpon>Metro_ParkingDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet6.xsc">
+      <DependentUpon>Metro_ParkingDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet6.xss">
+      <DependentUpon>Metro_ParkingDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet7.xsc">
+      <DependentUpon>Metro_ParkingDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet7.xss">
+      <DependentUpon>Metro_ParkingDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet8.xsc">
+      <DependentUpon>Metro_ParkingDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet8.xss">
+      <DependentUpon>Metro_ParkingDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet9.xsc">
+      <DependentUpon>Metro_ParkingDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Metro_ParkingDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Metro_ParkingDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Metro_ParkingDataSet9.xss">
+      <DependentUpon>Metro_ParkingDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Rates.xsc">
+      <DependentUpon>Rates.xsd</DependentUpon>
+    </None>
+    <None Include="Rates.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rates.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rates.xss">
+      <DependentUpon>Rates.xsd</DependentUpon>
+    </None>
+    <None Include="User_Data.xsc">
+      <DependentUpon>User_Data.xsd</DependentUpon>
+    </None>
+    <None Include="User_Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>User_Data.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="User_Data.xss">
+      <DependentUpon>User_Data.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ic_forSwitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="metroparkingred.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\metroparking.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
