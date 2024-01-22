@@ -10,6 +10,7 @@ Welcome to the **Parking Lot Management System**, a state-of-the-art solution ta
 ![TICKET](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/1055f7a7-c0e3-4db5-a8d7-e4ba496da1dc)
 - Tracks vehicles entering and exiting the parking lot.
 - Automates ticket and receipt generation.
+- Provides Revenue and Detailed report.
 
 #### 🔐 User Authentication
 - **Employee Login**
