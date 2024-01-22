@@ -17,27 +17,21 @@ Welcome to the **Parking Lot Management System** repository, designed to revolut
 - **Admin Login**
   ![Admin Login](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/0faf8b4f-9ced-4f9a-bd4a-0c0781c62a07)
 
-#### 🙋 Welcome Prompt
+#### 🛠️ Employee Module
+
+##### Welcome Prompt
 - **Employee Welcome Screen**
   ![Employee Welcome](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/0847a268-8e7a-4bba-8280-19aeaa2c75a6)
-- **Admin Welcome Screen**
-  ![Admin Welcome](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/41e28161-3e3b-4660-a310-f706e1f37d21)
 
-#### 🗺️ Intuitive Navigation Menu
-- **Employee Menu**
-  ![Employee Nav Menu](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/433805ba-39c3-4bdd-90a4-a3d061e447cf)
-- **Admin Menu**
-  ![Admin Nav Menu](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/c77096b2-8cb2-4176-9889-3d25ddf37d09)
+##### Intuitive Navigation Menu
+![Employee Nav Menu](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/433805ba-39c3-4bdd-90a4-a3d061e447cf)
+- Provides access to all necessary employee functionalities.
 
 #### 🚗 Vehicle In/Out Processing
 - **Flat Rate Parking**
   ![Flat Rate Parking](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/16ea146e-5d6e-479b-acbc-c3f34c11d5b9)
 - **Casual Rate Parking**
   ![Casual Rate Parking](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/e966e5ab-0d6f-42f1-868b-f7203788eb3c)
-
-#### 💸 Parking Rates Module
-![Parking Rates](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/1551e9dd-f06d-4dfb-853c-4a58a33af922)
-- Real-time rate, discount, and penalty management.
 
 #### 🗺️ Parking Lot Map Module
 - **Map View**
@@ -49,22 +43,30 @@ Welcome to the **Parking Lot Management System** repository, designed to revolut
 ![Vehicle Logs](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/9c48f15a-e9aa-46d3-8db2-4ae87d8f2425)
 - Detailed logs for flat rate and casual parking.
 
-#### 📊 Reporting Module
-- **Revenue Reports**
-  ![Revenue Report](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/42cdfe8d-4433-455a-ade4-0c30ce4a63cf)
-- **Detailed Reports**
-  ![Detailed Report](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/8b5ae4d7-9eba-4a7d-8012-0f087a12c8c1)
+#### 🛠️ Admin Module
 
-#### 👥 Manage Employee Module
-- **Employee Management**
+##### Navigation Menu for Admin
+![Admin Navigation Menu](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/c77096b2-8cb2-4176-9889-3d25ddf37d09)
+- Provides access to all administrative functionalities.
+
+##### Manage Rates, Penalties, and Discounts
+![Manage Rates](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/68c28f19-4733-4f13-83cc-fcc453d5a7d0)
+- Enables the admin to edit rates, penalties, and discounts for the parking lot management.
+
+##### Report Generation Module
+- **Revenue Report Generation Section**
+  ![Revenue Report Generation](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/42cdfe8d-4433-455a-ade4-0c30ce4a63cf)
+- **Detailed Report Generation Section**
+  ![Detailed Report Generation](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/8b5ae4d7-9eba-4a7d-8012-0f087a12c8c1)
+
+##### Manage Employee Module
+- **Employee Management Section**
   ![Employee Management](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/bbbfc780-402f-49a5-904d-0b7944caa5fd)
-- **Shift Summary**
+  - Manage employee information including personal details, shifts, and roles.
+- **Shift Summary Section**
   ![Shift Summary](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/2d7f6093-940f-4475-92dd-900518471605)
+  - View current deployment status of employees, e.g., morning/afternoon shifts, Entry and Exit leads.
 
-#### ⚙️ Settings Module
+##### Settings Module
 ![Settings](https://github.com/CarlosNatanauan/Metro-Parking-Philippines-System/assets/94023674/2e23c5a6-81c3-4829-a6ab-6b652d864f68)
-- Backup and restore database, update admin info, and view login trails.
-
----
-
-📝 **Note**: Ensure all image URLs are accurate and accessible. Replace placeholder URLs with actual image paths.
+- Admin functionalities for database backup/restore, updating admin information, and viewing login trails.
